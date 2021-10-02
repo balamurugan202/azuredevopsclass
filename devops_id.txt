@@ -1,0 +1,16 @@
+secretID:30d1e3e2-c8c1-443e-90c0-a8e0c85b5967
+
+Value:XhjyI8WUXKg-1oOths~.v9oECUX_1L-RdR
+
+client ID: 9ef13dcd-2da7-4cb3-ab46-68fd2c35bdcb
+
+object ID: 05c50213-9c33-4b2f-ad34-46d086ac8f91
+
+tenant ID: a75c15c2-3f29-4977-9f49-21a27d8ae58d
+
+Subscription ID: cc5c1707-62d9-4318-87da-cb913a35aa15
+
+
+$(build.artifactstagingdirectory)
+
+az group list --query "[?starts_with(name,'eastusrg')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
